@@ -3,11 +3,7 @@
 import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import dynamic from "next/dynamic"
 import { useLanguage } from "@/context/LanguageContext"
-
-// ogl uses WebGL APIs not available in SSR — load client-side only
-const Plasma = dynamic(() => import("@/components/ui/plasma").then((m) => m.Plasma), { ssr: false })
 
 function fadeUp(delay: number) {
   return {
@@ -57,11 +53,8 @@ export function Hero() {
   const t = content[language]
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 pt-20 overflow-hidden">
-      {/* Plasma ambient background */}
-      <Plasma color="#4a7c59" speed={0.4} opacity={0.6} mouseInteractive className="plasma-container" />
-
-      <div className="relative z-10 mx-auto max-w-6xl w-full">
+    <section className="min-h-screen flex flex-col justify-center px-6 pt-20">
+      <div className="mx-auto max-w-6xl w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column */}
           <div className="space-y-8">
