@@ -1,20 +1,20 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink, Github, ChevronRight } from "lucide-react"
-import { getProjectById, getAllProjectIds, projects } from "@/lib/projects"
+import { getProjectBySlug, getAllProjectSlugs, projects } from "@/lib/data"
 import type { Metadata } from "next"
 
 interface PageProps {
-  params: Promise<{ id: string }>
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  return getAllProjectIds().map((id) => ({ id }))
+  return getAllProjectSlugs().map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params
-  const project = getProjectById(id)
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
   
   if (!project) {
     return { title: "Project Not Found" }
@@ -27,14 +27,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  const { id } = await params
-  const project = getProjectById(id)
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
 
   if (!project) {
     notFound()
   }
 
-  const currentIndex = projects.findIndex((p) => p.id === id)
+  const currentIndex = projects.findIndex((p) => p.slug === slug)
   const nextProject = projects[currentIndex + 1] || projects[0]
 
   return (
@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: PageProps) {
             <span className="text-muted-foreground">•</span>
             <span className="text-muted-foreground font-mono text-sm">{project.period}</span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
             {project.title}
           </h1>
           <p className="text-xl text-muted-foreground mt-6 leading-relaxed">
@@ -190,7 +190,7 @@ export default async function ProjectPage({ params }: PageProps) {
         <section className="pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground mb-4">Next Case Study</p>
           <Link
-            href={`/projects/${nextProject.id}`}
+            href={`/projects/${nextProject.slug}`}
             className="group flex items-center justify-between p-6 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all"
           >
             <div>

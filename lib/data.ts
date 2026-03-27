@@ -1,5 +1,5 @@
 export interface Project {
-  id: string
+  slug: string
   title: string
   role: string
   period: string
@@ -18,7 +18,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "ai-recruitment-tool",
+    slug: "ai-recruitment-tool",
     title: "AI & Machine Learning Recruitment Support Tool for HR",
     role: "Frontend Developer",
     period: "Oct 2025 - Dec 2025",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "bus-station-management",
+    slug: "bus-station-management",
     title: "Eastern Bus Station Management Website",
     role: "Frontend Developer",
     period: "Apr 2025 - May 2025",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "personal-finance",
+    slug: "personal-finance",
     title: "Personal Finance Management Website",
     role: "Frontend Developer",
     period: "Mar 2025 - May 2025",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "corporate-website",
+    slug: "corporate-website",
     title: "Nhien Viet Inspired - Corporate Website",
     role: "Frontend Developer",
     period: "Jun 2025 - Aug 2025",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "science-tech-management",
+    slug: "science-tech-management",
     title: "Science and Technology Management System",
     role: "Full-stack Developer",
     period: "Oct 2025 - Dec 2025",
@@ -186,10 +186,10 @@ export const projects: Project[] = [
   }
 ]
 
-export function getProjectById(id: string): Project | undefined {
-  return projects.find(project => project.id === id)
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find(project => project.slug === slug)
 }
 
-export function getAllProjectIds(): string[] {
-  return projects.map(project => project.id)
+export function getAllProjectSlugs(): string[] {
+  return projects.map(project => project.slug)
 }

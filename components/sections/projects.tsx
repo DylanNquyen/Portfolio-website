@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
-import { projects } from "@/lib/projects"
+import { projects } from "@/lib/data"
 
 export function Projects() {
   return (
@@ -20,8 +20,8 @@ export function Projects() {
         <div className="space-y-6">
           {projects.map((project, index) => (
             <Link
-              key={project.id}
-              href={`/projects/${project.id}`}
+              key={project.slug}
+              href={`/projects/${project.slug}`}
               className="group block p-6 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-secondary/30 transition-all"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
