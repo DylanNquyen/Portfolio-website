@@ -3,17 +3,29 @@
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Github, Mail, Menu, X } from "lucide-react"
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher"
+import { useLanguage } from "@/context/LanguageContext"
 
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-]
+const navItems = {
+  en: [
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ],
+  vi: [
+    { label: "Giới thiệu", href: "#about" },
+    { label: "Kinh nghiệm", href: "#experience" },
+    { label: "Dự án", href: "#projects" },
+    { label: "Liên hệ", href: "#contact" },
+  ],
+}
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language } = useLanguage()
+  const items = navItems[language]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,9 +54,9 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {items.map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
               >
@@ -53,7 +65,8 @@ export function Header() {
               </Link>
             ))}
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
-              <a
+              <LanguageSwitcher />
+              {/* <a
                 href="https://github.com/DylanNguyen"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -68,7 +81,7 @@ export function Header() {
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -86,9 +99,9 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
+              {items.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -97,6 +110,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex items-center gap-4 pt-4 border-t border-border">
+                <LanguageSwitcher />
                 <a
                   href="https://github.com/DylanNguyen"
                   target="_blank"

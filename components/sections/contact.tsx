@@ -1,22 +1,43 @@
-import { Mail, Github, MapPin, Phone, Linkedin } from "lucide-react"
+"use client"
+
+import { Mail, MapPin, Phone, LinkedinIcon } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
+
+const labels = {
+  en: {
+    section: "04. Contact",
+    heading: "Get In Touch",
+    sub: "I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    location: "Location",
+    ctaTitle: "Let's Work Together",
+    ctaBody: "I'm passionate about building high-performance web applications and always eager to learn new technologies.",
+    ctaBtn: "Say Hello",
+  },
+  vi: {
+    section: "04. Liên hệ",
+    heading: "Liên hệ với tôi",
+    sub: "Tôi đang tìm kiếm cơ hội thực tập. Dù bạn có câu hỏi hay chỉ muốn chào hỏi, hãy liên hệ với tôi!",
+    location: "Địa chỉ",
+    ctaTitle: "Hãy cùng hợp tác",
+    ctaBody: "Tôi đam mê xây dựng ứng dụng web hiệu suất cao và luôn háo hức học hỏi công nghệ mới.",
+    ctaBtn: "Nhắn tin ngay",
+  },
+}
 
 export function Contact() {
+  const { language } = useLanguage()
+  const t = labels[language]
+
   return (
     <section id="contact" className="py-24 px-6 bg-card/50">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-primary font-mono text-sm mb-2">04. Contact</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Get In Touch
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            I&apos;m currently looking for internship opportunities. Whether you have 
-            a question or just want to say hi, feel free to reach out!
-          </p>
+          <p className="text-primary font-mono text-sm mb-2">{t.section}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">{t.heading}</h2>
+          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">{t.sub}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          {/* Contact Info */}
           <div className="space-y-6">
             <a
               href="mailto:thiennguyenngoc004@gmail.com"
@@ -40,12 +61,12 @@ export function Contact() {
               className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Linkedin className="w-5 h-5 text-primary" />
+                <LinkedinIcon className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">LinkedIn</p>
                 <p className="text-foreground group-hover:text-primary transition-colors">
-                  linkedin.com/in/dylan-nquyen
+                  linkedin.com/in/dylan-nguyen
                 </p>
               </div>
             </a>
@@ -65,27 +86,21 @@ export function Contact() {
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Location</p>
+                <p className="text-sm text-muted-foreground">{t.location}</p>
                 <p className="text-foreground">Di An, Binh Duong, Vietnam</p>
               </div>
             </div>
           </div>
 
-          {/* CTA */}
           <div className="flex flex-col justify-center">
             <div className="p-8 rounded-lg border border-primary/30 bg-primary/5 text-center">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Let&apos;s Work Together
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                I&apos;m passionate about building high-performance web applications 
-                and always eager to learn new technologies.
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">{t.ctaTitle}</h3>
+              <p className="text-muted-foreground mb-6">{t.ctaBody}</p>
               <a
                 href="mailto:thiennguyenngoc004@gmail.com"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
               >
-                Say Hello
+                {t.ctaBtn}
               </a>
             </div>
           </div>

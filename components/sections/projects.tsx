@@ -1,20 +1,34 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { projects } from "@/lib/data"
+import { useLanguage } from "@/context/LanguageContext"
+
+const labels = {
+  en: {
+    section: "03. Projects",
+    heading: "Case Studies",
+    sub: "A selection of projects showcasing my technical skills in frontend development, from complex SPAs to performance-optimized websites.",
+  },
+  vi: {
+    section: "03. Dự án",
+    heading: "Các Dự án Tiêu biểu",
+    sub: "Một số dự án thể hiện kỹ năng kỹ thuật của tôi trong phát triển frontend, từ SPA phức tạp đến website tối ưu hiệu suất.",
+  },
+}
 
 export function Projects() {
+  const { language } = useLanguage()
+  const t = labels[language]
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12">
-          <p className="text-primary font-mono text-sm mb-2">03. Projects</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Case Studies
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl">
-            A selection of projects showcasing my technical skills in frontend 
-            development, from complex SPAs to performance-optimized websites.
-          </p>
+          <p className="text-primary font-mono text-sm mb-2">{t.section}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">{t.heading}</h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl">{t.sub}</p>
         </div>
 
         <div className="space-y-6">
@@ -29,26 +43,20 @@ export function Projects() {
                   <span className="text-primary font-mono text-sm">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-xs text-muted-foreground font-mono">
-                    {project.period}
-                  </span>
+                  <span className="text-xs text-muted-foreground font-mono">{project.period}</span>
                 </div>
-                
+
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-lg">
-                        {project.title}
+                        {project.title[language]}
                       </h3>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        {project.role}
-                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">{project.role[language]}</p>
                     </div>
                     <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
                   </div>
-                  <p className="text-muted-foreground mt-3 line-clamp-2">
-                    {project.summary}
-                  </p>
+                  <p className="text-muted-foreground mt-3 line-clamp-2">{project.summary[language]}</p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.techStack.slice(0, 5).map((tech) => (
                       <span
