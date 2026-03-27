@@ -3,8 +3,11 @@
 import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Plasma } from "@/components/ui/plasma"
+import dynamic from "next/dynamic"
 import { useLanguage } from "@/context/LanguageContext"
+
+// ogl uses WebGL APIs not available in SSR — load client-side only
+const Plasma = dynamic(() => import("@/components/ui/plasma").then((m) => m.Plasma), { ssr: false })
 
 function fadeUp(delay: number) {
   return {
