@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1774591510443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774591526235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   authors: [{ name: 'Nguyen Ngoc Thien' }],\r\n   openGraph: {\r\n     title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n     description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',\r\n-    images: [{ url: '/og-image.png' }], \r\n+    images: [{ url: '/opengraph-image.png' }], \r\n     locale: 'vi_VN',\r\n     type: 'website',\r\n   },\r\n }\r\n"
+                }
+            ],
+            "date": 1774591510443,
+            "name": "Commit-0",
+            "content": "import type { Metadata, Viewport } from 'next'\r\nimport { Inter, JetBrains_Mono } from 'next/font/google'\r\nimport { Analytics } from '@vercel/analytics/next'\r\nimport './globals.css'\r\n\r\nconst inter = Inter({ \r\n  subsets: [\"latin\"],\r\n  variable: '--font-inter'\r\n})\r\n\r\nconst jetbrainsMono = JetBrains_Mono({ \r\n  subsets: [\"latin\"],\r\n  variable: '--font-jetbrains'\r\n})\r\n\r\nexport const metadata: Metadata = {\r\n  title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n  description: 'Software Engineering student with 3 years of experience building high-performance web applications using React.js, Vue 3, and TypeScript. Specialized in creating responsive, accessible, and performant user interfaces.',\r\n  keywords: ['Frontend Developer', 'React.js', 'Vue.js', 'TypeScript', 'Web Development', 'Software Engineer'],\r\n  authors: [{ name: 'Nguyen Ngoc Thien' }],\r\n  openGraph: {\r\n    title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n    description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',\r\n    images: [{ url: '/og-image.png' }], \r\n    locale: 'vi_VN',\r\n    type: 'website',\r\n  },\r\n}\r\n\r\nexport const viewport: Viewport = {\r\n  themeColor: [\r\n    { media: '(prefers-color-scheme: light)', color: '#fafafa' },\r\n    { media: '(prefers-color-scheme: dark)', color: '#1a1d2e' },\r\n  ],\r\n}\r\n\r\nexport default function RootLayout({\r\n  children,\r\n}: Readonly<{\r\n  children: React.ReactNode\r\n}>) {\r\n  return (\r\n    <html lang=\"en\" className=\"dark\">\r\n      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>\r\n        {children}\r\n        <Analytics />\r\n      </body>\r\n    </html>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

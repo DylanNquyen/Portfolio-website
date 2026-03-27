@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nguyen Ngoc Thien | Frontend Developer',
     description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',
+    images: [{ url: '/opengraph-image.png' }], 
+    locale: 'vi_VN',
     type: 'website',
   },
 }
