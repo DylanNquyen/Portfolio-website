@@ -1,0 +1,54 @@
+{
+    "sourceFile": "components/sections/footer.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1774588611962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774588672138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           </div>\r\n           \r\n           <div className=\"flex items-center gap-4\">\r\n             <a\r\n-              href=\"https://github.com/DylanNquyen\"\r\n+              href=\"https://www.linkedin.com/in/dylan-nguyen-0028821a7\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"GitHub\"\r\n"
+                },
+                {
+                    "date": 1774588715504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           </div>\r\n           \r\n           <div className=\"flex items-center gap-4\">\r\n             <a\r\n-              href=\"https://www.linkedin.com/in/dylan-nguyen-0028821a7\"\r\n+              href=\"https://github.com/DylanNquyen\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"GitHub\"\r\n"
+                },
+                {
+                    "date": 1774588731649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           </div>\r\n           \r\n           <div className=\"flex items-center gap-4\">\r\n             <a\r\n-              href=\"https://github.com/DylanNquyen\"\r\n+              href=\"https://github.com/DylanNguyen\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"GitHub\"\r\n"
+                },
+                {
+                    "date": 1774588876894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n           </div>\r\n           \r\n           <div className=\"flex items-center gap-4\">\r\n             <a\r\n-              href=\"https://github.com/DylanNguyen\"\r\n+              href=\"https://github.com/DylanNquyen\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"GitHub\"\r\n"
+                },
+                {
+                    "date": 1774588900571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,13 @@\n           </div>\r\n           \r\n           <div className=\"flex items-center gap-4\">\r\n             <a\r\n-              href=\"https://github.com/DylanNquyen\"\r\n+              href=\"https://www.linkedin.com/in/dylan-nguyen-0028821a7\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n-              aria-label=\"GitHub\"\r\n+              aria-label=\"LinkedIn\"\r\n             >\r\n               <Github className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n"
+                },
+                {
+                    "date": 1774588949126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Github, Mail } from \"lucide-react\"\r\n+import { Github, Linkedin, Mail } from \"lucide-react\"\r\n \r\n export function Footer() {\r\n   return (\r\n     <footer className=\"py-8 px-6 border-t border-border\">\r\n@@ -18,8 +18,17 @@\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"LinkedIn\"\r\n             >\r\n+              <Linkedin className=\"w-5 h-5\" />\r\n+            </a>\r\n+            <a\r\n+              href=\"https://github.com/DylanNguyen\"\r\n+              target=\"_blank\"\r\n+              rel=\"noopener noreferrer\"\r\n+              className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n+              aria-label=\"GitHub\"\r\n+            >\r\n               <Github className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n               href=\"mailto:thiennguyenngoc004@gmail.com\"\r\n"
+                },
+                {
+                    "date": 1774588961266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             >\r\n               <Linkedin className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n-              href=\"https://github.com/DylanNguyen\"\r\n+              href=\"https://github.com/DylanNquyen\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"GitHub\"\r\n"
+                },
+                {
+                    "date": 1774589031089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,13 +21,13 @@\n             >\r\n               <Linkedin className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n-              href=\"https://github.com/DylanNquyen\"\r\n+              href=\"https://www.facebook.com/DylanNquyen/\"\r\n               target=\"_blank\"\r\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n-              aria-label=\"GitHub\"\r\n+              aria-label=\"Facebook\"\r\n             >\r\n               <Github className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n"
+                },
+                {
+                    "date": 1774589037133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Github, Linkedin, Mail } from \"lucide-react\"\r\n+import { Facebook, Github, Linkedin, Mail } from \"lucide-react\"\r\n \r\n export function Footer() {\r\n   return (\r\n     <footer className=\"py-8 px-6 border-t border-border\">\r\n@@ -27,9 +27,9 @@\n               rel=\"noopener noreferrer\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n               aria-label=\"Facebook\"\r\n             >\r\n-              <Github className=\"w-5 h-5\" />\r\n+              <Facebook className=\"w-5 h-5\" />\r\n             </a>\r\n             <a\r\n               href=\"mailto:thiennguyenngoc004@gmail.com\"\r\n               className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n"
+                }
+            ],
+            "date": 1774588611962,
+            "name": "Commit-0",
+            "content": "import { Github, Mail } from \"lucide-react\"\r\n\r\nexport function Footer() {\r\n  return (\r\n    <footer className=\"py-8 px-6 border-t border-border\">\r\n      <div className=\"mx-auto max-w-6xl\">\r\n        <div className=\"flex flex-col md:flex-row items-center justify-between gap-4\">\r\n          <div className=\"flex items-center gap-4\">\r\n            <span className=\"text-sm text-muted-foreground\">\r\n              Designed & Built by Nguyen Ngoc Thien\r\n            </span>\r\n          </div>\r\n          \r\n          <div className=\"flex items-center gap-4\">\r\n            <a\r\n              href=\"https://github.com/DylanNquyen\"\r\n              target=\"_blank\"\r\n              rel=\"noopener noreferrer\"\r\n              className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n              aria-label=\"GitHub\"\r\n            >\r\n              <Github className=\"w-5 h-5\" />\r\n            </a>\r\n            <a\r\n              href=\"mailto:thiennguyenngoc004@gmail.com\"\r\n              className=\"text-muted-foreground hover:text-foreground transition-colors\"\r\n              aria-label=\"Email\"\r\n            >\r\n              <Mail className=\"w-5 h-5\" />\r\n            </a>\r\n          </div>\r\n          \r\n          <div className=\"text-sm text-muted-foreground\">\r\n            {new Date().getFullYear()} — All rights reserved\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

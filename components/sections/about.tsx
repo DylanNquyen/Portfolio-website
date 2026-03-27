@@ -15,7 +15,7 @@ export function About() {
           <div className="lg:col-span-2 space-y-6">
             <p className="text-muted-foreground leading-relaxed text-lg">
               I&apos;m a Software Engineering student at{" "}
-              <span className="text-foreground font-medium">HUTECH</span> with a 
+              <span className="text-foreground font-medium">HUTECH </span> with a 
               passion for crafting pixel-perfect, accessible user interfaces. My journey 
               in web development started 3 years ago, and since then, I&apos;ve built 
               over 10 web projects ranging from corporate websites to complex SPAs.

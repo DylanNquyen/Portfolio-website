@@ -1,4 +1,4 @@
-import { Mail, Github, MapPin, Phone } from "lucide-react"
+import { Mail, Github, MapPin, Phone, Linkedin } from "lucide-react"
 
 export function Contact() {
   return (
@@ -34,18 +34,18 @@ export function Contact() {
             </a>
 
             <a
-              href="https://github.com/DylanNguyen"
+              href="https://www.linkedin.com/in/dylan-nguyen-0028821a7/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Github className="w-5 h-5 text-primary" />
+                <Linkedin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">GitHub</p>
+                <p className="text-sm text-muted-foreground">LinkedIn</p>
                 <p className="text-foreground group-hover:text-primary transition-colors">
-                  github.com/DylanNguyen
+                  linkedin.com/in/dylan-nquyen
                 </p>
               </div>
             </a>

@@ -86,7 +86,7 @@ export function Skills() {
               </li>
               <li className="flex justify-between">
                 <span>English</span>
-                <span className="text-foreground">Intermediate (CEF B1)</span>
+                <span className="text-foreground">Intermediate</span>
               </li>
             </ul>
           </div>

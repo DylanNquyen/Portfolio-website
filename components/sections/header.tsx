@@ -37,7 +37,7 @@ export function Header() {
             href="/"
             className="text-lg font-semibold tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            thien.dev
+            Dylan Nguyen
           </Link>
 
           {/* Desktop Navigation */}
