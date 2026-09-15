@@ -51,8 +51,8 @@ const content = {
     cta1: "View My Work",
     cta2: "Get In Touch",
     stats: [
-      { value: "3+", label: "Years Experience" },
-      { value: "10+", label: "Projects Built" },
+      { value: "1+", label: "Years Experience" },
+      { value: "5+", label: "Projects Built" },
       { value: "3.30", label: "GPA / 4.0" },
     ],
     nav: [
