@@ -13,6 +13,37 @@ function fadeUp(delay: number) {
   }
 }
 
+function scrollToAbout() {
+  const aboutSection = document.querySelector("#about")
+
+  if (!aboutSection) return
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    aboutSection.scrollIntoView()
+    return
+  }
+
+  const startPosition = window.scrollY
+  const targetPosition = aboutSection.getBoundingClientRect().top + startPosition
+  const distance = targetPosition - startPosition
+  const duration = 5000
+  let startTime: number | null = null
+
+  const animateScroll = (currentTime: number) => {
+    startTime ??= currentTime
+    const progress = Math.min((currentTime - startTime) / duration, 1)
+    const easedProgress = 1 - Math.pow(1 - progress, 3)
+
+    window.scrollTo(0, startPosition + distance * easedProgress)
+
+    if (progress < 1) {
+      window.requestAnimationFrame(animateScroll)
+    }
+  }
+
+  window.requestAnimationFrame(animateScroll)
+}
+
 const content = {
   en: {
     greeting: "Hello, I'm",
@@ -133,9 +164,18 @@ export function Hero() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+        <Link
+          href="#about"
+          onClick={(event) => {
+            event.preventDefault()
+            scrollToAbout()
+          }}
+          aria-label="Scroll to about section"
+          title="Scroll down"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:grid place-items-center rounded-full p-2 text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        >
           <ArrowDown className="w-5 h-5 text-muted-foreground" />
-        </div>
+        </Link>
       </div>
     </section>
   )

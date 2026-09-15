@@ -7,6 +7,7 @@ import {
   Contact, 
   Footer 
 } from "@/components/sections"
+import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   )
 }
