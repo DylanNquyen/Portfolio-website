@@ -15,13 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Nguyen Ngoc Thien | Frontend Developer',
-  description: 'Software Engineering student with 3 years of experience building high-performance web applications using React.js, Vue 3, and TypeScript. Specialized in creating responsive, accessible, and performant user interfaces.',
-  keywords: ['Frontend Developer', 'React.js', 'Vue.js', 'TypeScript', 'Web Development', 'Software Engineer'],
+  title: 'Nguyen Ngoc Thien | Full-stack Developer',
+  description: 'Software Engineering student with hands-on experience building high-performance frontend applications and full-stack systems using React, TypeScript, Node.js, NestJS, Docker, and microservices-style architecture.',
+  keywords: ['Full-stack Developer', 'React.js', 'TypeScript', 'Node.js', 'NestJS', 'Docker', 'Microservices', 'Web Development', 'Software Engineer'],
   authors: [{ name: 'Nguyen Ngoc Thien' }],
   openGraph: {
-    title: 'Nguyen Ngoc Thien | Frontend Developer',
-    description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',
+    title: 'Nguyen Ngoc Thien | Full-stack Developer',
+    description: 'Full-stack Developer with frontend strength and backend system experience',
     images: [{ url: '/opengraph-image.png' }], 
     locale: 'vi_VN',
     type: 'website',

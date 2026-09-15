@@ -5,30 +5,54 @@ import { useLanguage } from "@/context/LanguageContext"
 const skillCategories = {
   en: [
     {
-      level: "Expert",
-      skills: ["HTML5", "CSS3 / SCSS", "JavaScript (ES6+)", "TypeScript", "React.js", "Tailwind CSS", "Responsive Design"],
+      level: "Languages",
+      skills: ["JavaScript (ES6+)", "TypeScript", "C# (.NET)", "HTML5", "CSS3"],
     },
     {
-      level: "Experienced",
-      skills: ["Vue 3", "Vite", "Pinia", "Redux", "Vue Router", "React Router", "Git / GitHub", "Axios", "Figma to Code"],
+      level: "Frontend",
+      skills: ["React.js", "React 19", "Vue 3", "Zustand", "Pinia", "Redux", "Tailwind CSS", "Ant Design", "Responsive Design"],
     },
     {
-      level: "Knowledge",
-      skills: ["Node.js", "Express.js", "C# (.NET)", "SQL Server", "Docker"],
+      level: "Backend & APIs",
+      skills: ["Node.js", "NestJS", "Express.js", "RESTful APIs", "WebSocket", "Socket.IO", "JWT Authentication", "RBAC"],
+    },
+    {
+      level: "Databases",
+      skills: ["MySQL", "SQL Server", "MongoDB", "TypeORM", "Database Migrations"],
+    },
+    {
+      level: "Architecture & DevOps",
+      skills: ["Microservices-style Architecture", "Docker", "Docker Compose", "Kong API Gateway", "GitHub Actions", "CI/CD", "Vercel"],
+    },
+    {
+      level: "AI & Tools",
+      skills: ["Google Gemini API", "Axios", "Git", "GitHub", "Figma"],
     },
   ],
   vi: [
     {
-      level: "Thành thạo",
-      skills: ["HTML5", "CSS3 / SCSS", "JavaScript (ES6+)", "TypeScript", "React.js", "Tailwind CSS", "Responsive Design"],
+      level: "Ngôn ngữ",
+      skills: ["JavaScript (ES6+)", "TypeScript", "C# (.NET)", "HTML5", "CSS3"],
     },
     {
-      level: "Có kinh nghiệm",
-      skills: ["Vue 3", "Vite", "Pinia", "Redux", "Vue Router", "React Router", "Git / GitHub", "Axios", "Figma to Code"],
+      level: "Frontend",
+      skills: ["React.js", "React 19", "Vue 3", "Zustand", "Pinia", "Redux", "Tailwind CSS", "Ant Design", "Responsive Design"],
     },
     {
-      level: "Kiến thức cơ bản",
-      skills: ["Node.js", "Express.js", "C# (.NET)", "SQL Server", "Docker"],
+      level: "Backend & APIs",
+      skills: ["Node.js", "NestJS", "Express.js", "RESTful APIs", "WebSocket", "Socket.IO", "JWT Authentication", "RBAC"],
+    },
+    {
+      level: "Cơ sở dữ liệu",
+      skills: ["MySQL", "SQL Server", "MongoDB", "TypeORM", "Database Migrations"],
+    },
+    {
+      level: "Kiến trúc & DevOps",
+      skills: ["Microservices-style Architecture", "Docker", "Docker Compose", "Kong API Gateway", "GitHub Actions", "CI/CD", "Vercel"],
+    },
+    {
+      level: "AI & Tools",
+      skills: ["Google Gemini API", "Axios", "Git", "GitHub", "Figma"],
     },
   ],
 }
@@ -37,7 +61,7 @@ const labels = {
   en: {
     section: "02. Experience",
     heading: "Technical Skills",
-    sub: "My technical toolkit spans the modern frontend ecosystem with expertise in building performant, accessible, and maintainable applications.",
+    sub: "Full-stack Developer with a strong frontend foundation and hands-on experience in backend services, authentication, APIs, databases, Docker, and microservices-style architecture.",
     langTitle: "Languages",
     lang1: "Vietnamese",
     lang1level: "Native",
@@ -50,7 +74,7 @@ const labels = {
   vi: {
     section: "02. Kinh nghiệm",
     heading: "Kỹ năng Kỹ thuật",
-    sub: "Bộ công cụ kỹ thuật của tôi bao phủ hệ sinh thái frontend hiện đại với chuyên môn xây dựng ứng dụng hiệu suất cao, dễ tiếp cận và dễ bảo trì.",
+    sub: "Lập trình viên Full-stack với nền tảng frontend vững chắc và kinh nghiệm thực tế về backend services, authentication, APIs, databases, Docker và kiến trúc microservices-style.",
     langTitle: "Ngôn ngữ",
     lang1: "Tiếng Việt",
     lang1level: "Bản ngữ",
@@ -116,7 +140,7 @@ export function Skills() {
             <div className="text-muted-foreground">
               <p className="text-foreground font-medium">{t.eduName}</p>
               <p>{t.eduSub}</p>
-              <p className="text-primary">GPA: 3.27 / 4.0</p>
+              <p className="text-primary">GPA: 3.30 / 4.0</p>
             </div>
           </div>
         </div>

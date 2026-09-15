@@ -16,13 +16,13 @@ function fadeUp(delay: number) {
 const content = {
   en: {
     greeting: "Hello, I'm",
-    title: "Frontend Developer",
+    title: "Full-stack Developer",
     cta1: "View My Work",
     cta2: "Get In Touch",
     stats: [
       { value: "3+", label: "Years Experience" },
       { value: "10+", label: "Projects Built" },
-      { value: "3.27", label: "GPA / 4.0" },
+      { value: "3.30", label: "GPA / 4.0" },
     ],
     nav: [
       { label: "About", desc: "Background & education", href: "#about" },
@@ -32,13 +32,13 @@ const content = {
   },
   vi: {
     greeting: "Xin chào, tôi là",
-    title: "Lập trình viên Frontend",
+    title: "Lập trình viên Full-stack",
     cta1: "Xem Dự án",
     cta2: "Liên hệ",
     stats: [
       { value: "3+", label: "Năm kinh nghiệm" },
       { value: "10+", label: "Dự án đã làm" },
-      { value: "3.27", label: "GPA / 4.0" },
+      { value: "3.30", label: "GPA / 4.0" },
     ],
     nav: [
       { label: "Giới thiệu", desc: "Nền tảng & học vấn", href: "#about" },
@@ -69,21 +69,19 @@ export function Hero() {
             <motion.p className="text-muted-foreground leading-relaxed max-w-lg text-lg" {...fadeUp(0.4)}>
               {language === "en" ? (
                 <>
-                  Software Engineering student with 3 years of experience developing{" "}
-                  <span className="text-foreground font-medium">10+ web projects</span>.
-                  Specialized in building high-performance, responsive applications using{" "}
-                  <span className="text-primary">React.js</span>,{" "}
-                  <span className="text-primary">Vue 3</span>, and{" "}
-                  <span className="text-primary">TypeScript</span>.
+                  Software Engineering student with hands-on experience building high-performance frontend applications and full-stack systems. Skilled in{" "}
+                  <span className="text-primary">React</span>,{" "}
+                  <span className="text-primary">TypeScript</span>,{" "}
+                  <span className="text-primary">Node.js</span>,{" "}
+                  <span className="text-primary">NestJS</span>, REST/WebSocket APIs, Docker, and microservices-style architecture.
                 </>
               ) : (
                 <>
-                  Sinh viên Kỹ thuật Phần mềm với 3 năm kinh nghiệm phát triển{" "}
-                  <span className="text-foreground font-medium">10+ dự án web</span>.
-                  Chuyên xây dựng ứng dụng hiệu suất cao, responsive với{" "}
-                  <span className="text-primary">React.js</span>,{" "}
-                  <span className="text-primary">Vue 3</span> và{" "}
-                  <span className="text-primary">TypeScript</span>.
+                  Sinh viên Kỹ thuật Phần mềm có kinh nghiệm thực tế xây dựng ứng dụng frontend hiệu năng cao và hệ thống full-stack. Thành thạo{" "}
+                  <span className="text-primary">React</span>,{" "}
+                  <span className="text-primary">TypeScript</span>,{" "}
+                  <span className="text-primary">Node.js</span>,{" "}
+                  <span className="text-primary">NestJS</span>, REST/WebSocket APIs, Docker và kiến trúc microservices-style.
                 </>
               )}
             </motion.p>

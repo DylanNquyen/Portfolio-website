@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1774591510443,
@@ -12,6 +12,10 @@
                 {
                     "date": 1774591526235,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   authors: [{ name: 'Nguyen Ngoc Thien' }],\r\n   openGraph: {\r\n     title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n     description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',\r\n-    images: [{ url: '/og-image.png' }], \r\n+    images: [{ url: '/opengraph-image.png' }], \r\n     locale: 'vi_VN',\r\n     type: 'website',\r\n   },\r\n }\r\n"
+                },
+                {
+                    "date": 1789464283173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import type { Metadata, Viewport } from 'next'\r\n import { Inter, JetBrains_Mono } from 'next/font/google'\r\n import { Analytics } from '@vercel/analytics/next'\r\n+import { LanguageProvider } from '@/context/LanguageContext'\r\n import './globals.css'\r\n \r\n const inter = Inter({ \r\n   subsets: [\"latin\"],\r\n@@ -13,15 +14,15 @@\n   variable: '--font-jetbrains'\r\n })\r\n \r\n export const metadata: Metadata = {\r\n-  title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n-  description: 'Software Engineering student with 3 years of experience building high-performance web applications using React.js, Vue 3, and TypeScript. Specialized in creating responsive, accessible, and performant user interfaces.',\r\n-  keywords: ['Frontend Developer', 'React.js', 'Vue.js', 'TypeScript', 'Web Development', 'Software Engineer'],\r\n+  title: 'Nguyen Ngoc Thien | Full-stack Developer',\r\n+  description: 'Software Engineering student with hands-on experience building high-performance frontend applications and full-stack systems using React, TypeScript, Node.js, NestJS, Docker, and microservices-style architecture.',\r\n+  keywords: ['Full-stack Developer', 'React.js', 'TypeScript', 'Node.js', 'NestJS', 'Docker', 'Microservices', 'Web Development', 'Software Engineer'],\r\n   authors: [{ name: 'Nguyen Ngoc Thien' }],\r\n   openGraph: {\r\n-    title: 'Nguyen Ngoc Thien | Frontend Developer',\r\n-    description: 'Frontend Developer specializing in React.js, Vue 3, and TypeScript',\r\n+    title: 'Nguyen Ngoc Thien | Full-stack Developer',\r\n+    description: 'Full-stack Developer with frontend strength and backend system experience',\r\n     images: [{ url: '/opengraph-image.png' }], \r\n     locale: 'vi_VN',\r\n     type: 'website',\r\n   },\r\n@@ -41,9 +42,11 @@\n }>) {\r\n   return (\r\n     <html lang=\"en\" className=\"dark\">\r\n       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>\r\n-        {children}\r\n+        <LanguageProvider>\r\n+          {children}\r\n+        </LanguageProvider>\r\n         <Analytics />\r\n       </body>\r\n     </html>\r\n   )\r\n"
                 }
             ],
             "date": 1774591510443,

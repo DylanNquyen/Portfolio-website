@@ -30,6 +30,282 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "crypto-market-analytics-platform",
+    title: {
+      en: "Crypto Market Analytics Platform | CoinMarketCap Clone",
+      vi: "Nền tảng Phân tích Thị trường Crypto | Bản sao CoinMarketCap",
+    },
+    role: {
+      en: "Full-stack Developer",
+      vi: "Lập trình viên Full-stack",
+    },
+    period: "Jul 2026 - Sep 2026",
+    summary: {
+      en: "Responsive cryptocurrency market analytics platform built with React, NestJS, MySQL, real-time WebSocket updates, and Gemini AI.",
+      vi: "Nền tảng phân tích thị trường crypto responsive sử dụng React, NestJS, MySQL, WebSocket thời gian thực và Gemini AI.",
+    },
+    description: {
+      en: "Built a responsive cryptocurrency tracking platform using React 19, TypeScript, Zustand, NestJS, and MySQL, featuring market filtering, customizable data tables, search, and personalized watchlists.",
+      vi: "Xây dựng nền tảng theo dõi tiền mã hóa responsive bằng React 19, TypeScript, Zustand, NestJS và MySQL, hỗ trợ lọc thị trường, bảng dữ liệu tùy chỉnh, tìm kiếm và watchlist cá nhân.",
+    },
+    challenges: {
+      en: [
+        "Designing a microservices-style architecture with independent authentication and crypto services.",
+        "Protecting user-specific watchlist APIs with JWT-based authentication.",
+        "Delivering real-time market updates while handling external API failures.",
+        "Integrating Gemini AI while keeping external API calls resilient.",
+      ],
+      vi: [
+        "Thiết kế kiến trúc microservices-style với service authentication và crypto độc lập.",
+        "Bảo vệ các API watchlist theo người dùng bằng xác thực JWT.",
+        "Cung cấp dữ liệu thị trường thời gian thực và xử lý lỗi từ external APIs.",
+        "Tích hợp Gemini AI với cơ chế xử lý lỗi và retry phù hợp.",
+      ],
+    },
+    solutions: {
+      en: [
+        "Separated authentication and crypto services using NestJS with database-per-service architecture.",
+        "Routed REST APIs through Kong API Gateway using /api/auth, /api/crypto, and /api/ai prefixes.",
+        "Implemented JWT authentication with bcrypt password hashing and remote token verification through a backend guard.",
+        "Built Socket.IO real-time market updates with RxJS scheduling and normalized market data.",
+        "Integrated Gemini AI with bounded retry and graceful fallback handling.",
+        "Containerized the system with Docker Compose and automated validation/deployment workflows using GitHub Actions.",
+      ],
+      vi: [
+        "Tách authentication service và crypto service bằng NestJS theo kiến trúc database-per-service.",
+        "Định tuyến REST APIs qua Kong API Gateway với các prefix /api/auth, /api/crypto và /api/ai.",
+        "Triển khai JWT authentication với bcrypt password hashing và remote token verification thông qua backend guard.",
+        "Xây dựng cập nhật dữ liệu thị trường thời gian thực bằng Socket.IO, RxJS và normalized market data.",
+        "Tích hợp Gemini AI với bounded retry và graceful fallback.",
+        "Container hóa toàn hệ thống bằng Docker Compose và triển khai workflow CI/CD với GitHub Actions.",
+      ],
+    },
+    results: {
+      en: [
+        "Delivered a responsive crypto insight dashboard with real-time tracking and personalized watchlists.",
+        "Improved API security and service isolation with JWT and gateway routing.",
+        "Created a deployable microservices-style setup with Docker and CI/CD automation.",
+      ],
+      vi: [
+        "Bàn giao dashboard crypto responsive với tracking thời gian thực và watchlist cá nhân.",
+        "Nâng cao bảo mật API và tách biệt service bằng JWT và gateway routing.",
+        "Tạo môi trường triển khai theo kiểu microservices với Docker và tự động hóa CI/CD.",
+      ],
+    },
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Zustand",
+      "Recharts",
+      "Ant Design",
+      "NestJS",
+      "TypeORM",
+      "MySQL",
+      "Kong API Gateway",
+      "Socket.IO",
+      "Docker Compose",
+      "Google Gemini API",
+      "GitHub Actions CI/CD",
+    ],
+    features: {
+      en: [
+        "Cryptocurrency market tracking",
+        "Market filtering and search",
+        "Personalized watchlists",
+        "JWT authentication",
+        "Microservices-style architecture",
+        "Kong API Gateway",
+        "Real-time WebSocket market updates",
+        "Gemini AI Copilot",
+        "Dockerized services",
+        "CI/CD workflow",
+      ],
+      vi: [
+        "Theo dõi thị trường crypto",
+        "Lọc và tìm kiếm thị trường",
+        "Watchlist cá nhân",
+        "Xác thực JWT",
+        "Kiến trúc microservices-style",
+        "Kong API Gateway",
+        "Cập nhật thị trường thời gian thực bằng WebSocket",
+        "Gemini AI Copilot",
+        "Container hóa bằng Docker",
+        "Quy trình CI/CD",
+      ],
+    },
+    links: {
+      github: "https://github.com/DylanNquyen/coinmarketcap-microservices.git",
+    },
+  },
+  {
+    slug: "corporate-website",
+    title: {
+      en: "Nhien Viet Inspired - Corporate Website",
+      vi: "Nhiên Việt Inspired - Website Doanh nghiệp",
+    },
+    role: {
+      en: "Solo Frontend Developer",
+      vi: "Lập trình viên Front-end",
+    },
+    period: "Jun 2025 - Aug 2025",
+    summary: {
+      en: "High-performance corporate website built and deployed for a real business using Vanilla JavaScript, reusable OOP components, and Core Web Vitals optimization.",
+      vi: "Website doanh nghiệp hiệu suất cao được xây dựng và triển khai thực tế bằng Vanilla JavaScript, component OOP tái sử dụng và tối ưu Core Web Vitals.",
+    },
+    description: {
+      en: "Developed and deployed a fully responsive corporate website for a real business, covering travel, F&B, and visa services.",
+      vi: "Phát triển và triển khai website responsive cho doanh nghiệp thực tế trong lĩnh vực du lịch, F&B và dịch vụ visa.",
+    },
+    challenges: {
+      en: [
+        "Building a high-performance corporate site without framework overhead.",
+        "Optimizing loading performance and Core Web Vitals for real business traffic.",
+        "Creating reusable and maintainable UI modules in vanilla JavaScript.",
+        "Implementing reliable validation and contact form flows.",
+      ],
+      vi: [
+        "Xây dựng website doanh nghiệp hiệu suất cao mà không cần framework quá nặng.",
+        "Tối ưu thời gian tải và Core Web Vitals cho lưu lượng doanh nghiệp thực tế.",
+        "Tạo UI modules tái sử dụng và dễ bảo trì bằng vanilla JavaScript.",
+        "Triển khai validation và form liên hệ đáng tin cậy.",
+      ],
+    },
+    solutions: {
+      en: [
+        "Built reusable UI modules using ES6+ Classes and OOP patterns.",
+        "Optimized loading performance using native lazy loading, fixed image dimensions, aspect-ratio, and Intersection Observer.",
+        "Consolidated scroll, parallax, and header behavior into a requestAnimationFrame scheduler.",
+        "Implemented real-time form validation with Regex and EmailJS with PHP fallback.",
+        "Added accessibility support including keyboard focus management, skip links, and ARIA live regions.",
+      ],
+      vi: [
+        "Xây dựng UI modules tái sử dụng bằng ES6+ Classes và OOP.",
+        "Tối ưu loading bằng native lazy loading, kích thước ảnh cố định, aspect-ratio và Intersection Observer.",
+        "Gom logic scroll, parallax và header vào requestAnimationFrame scheduler.",
+        "Triển khai validation form thời gian thực bằng Regex và EmailJS với PHP fallback.",
+        "Bổ sung accessibility với keyboard focus management, skip link và ARIA live regions.",
+      ],
+    },
+    results: {
+      en: [
+        "Successfully deployed to production at nvgo.org.",
+        "Improved loading performance and Core Web Vitals.",
+        "Maintained responsive behavior across desktop and mobile devices.",
+      ],
+      vi: [
+        "Đã triển khai production tại nvgo.org.",
+        "Cải thiện hiệu suất tải trang và Core Web Vitals.",
+        "Duy trì responsive trên desktop và mobile.",
+      ],
+    },
+    techStack: ["Vanilla JavaScript (ES6+)", "HTML5", "CSS3", "EmailJS", "PHP fallback", "Intersection Observer API"],
+    features: {
+      en: [
+        "Real business production deployment",
+        "Responsive corporate landing pages",
+        "Performance-first UI architecture",
+        "Form validation and email integration",
+        "Accessibility enhancements",
+      ],
+      vi: [
+        "Triển khai production cho doanh nghiệp thực tế",
+        "Landing page doanh nghiệp responsive",
+        "Kiến trúc UI ưu tiên hiệu năng",
+        "Validation form và tích hợp email",
+        "Nâng cấp accessibility",
+      ],
+    },
+    links: {
+      live: "https://nvgo.org",
+      github: "https://github.com/DylanNquyen/Nhi-n-Vi-t-Inspired.git",
+    },
+  },
+  {
+    slug: "bus-station-management",
+    title: {
+      en: "Eastern Bus Station Management Website",
+      vi: "Website Quản lý Bến xe Miền Đông",
+    },
+    role: {
+      en: "Frontend Developer",
+      vi: "Lập trình viên Front-end",
+    },
+    period: "Apr 2025 - May 2025",
+    summary: {
+      en: "High-performance Vue 3 SPA for bus schedules, ticket booking, and operational management with JWT authentication and strict RBAC.",
+      vi: "SPA Vue 3 hiệu suất cao cho quản lý lịch trình, đặt vé và vận hành bến xe với xác thực JWT và RBAC chặt chẽ.",
+    },
+    description: {
+      en: "Built a bus station management SPA for customers and operational staff, covering schedules, trips, and ticket booking.",
+      vi: "Xây dựng SPA quản lý bến xe cho khách hàng và nhân sự vận hành, bao gồm lịch trình, chuyến xe và đặt vé.",
+    },
+    challenges: {
+      en: [
+        "Organizing complex ticket and schedule flows across customer and staff workflows.",
+        "Enforcing RBAC and route control across workflows and role-based pages.",
+        "Handling API contracts and response normalization consistently.",
+        "Preventing duplicate seat booking under concurrent interactions.",
+      ],
+      vi: [
+        "Tổ chức luồng đặt vé và lịch trình phức tạp giữa workflow khách hàng và nhân sự.",
+        "Thực thi RBAC và kiểm soát route theo vai trò trên các trang khác nhau.",
+        "Quản lý API contract và chuẩn hóa response nhất quán.",
+        "Ngăn chặn đặt chỗ trùng ghế khi có tương tác đồng thời.",
+      ],
+    },
+    solutions: {
+      en: [
+        "Modularized domain views and components using Vue 3.",
+        "Managed business state with Pinia stores for auth, trips, tickets, and customers.",
+        "Implemented Vue Router 4 navigation guards with RBAC for Customer, Staff, and Admin.",
+        "Standardized Axios request/response handling according to API_CONTRACT.md.",
+        "Added JWT Bearer token interceptors and centralized handling for 401, 403, 404, and 500 responses.",
+        "Used pessimistic UI for ticket and seat booking to rely on server-side confirmation and prevent duplicate seat booking.",
+      ],
+      vi: [
+        "Module hóa domain views và components bằng Vue 3.",
+        "Quản lý business state bằng Pinia cho auth, chuyến xe, vé xe và khách hàng.",
+        "Triển khai Vue Router 4 navigation guards với RBAC cho Customer, Staff và Admin.",
+        "Chuẩn hóa request/response theo API_CONTRACT.md.",
+        "Sử dụng Axios interceptors để đính kèm JWT Bearer token và xử lý tập trung lỗi 401, 403, 404 và 500.",
+        "Áp dụng pessimistic UI cho đặt vé/chọn ghế, dựa trên server-side confirmation để hạn chế race condition đặt trùng ghế.",
+      ],
+    },
+    results: {
+      en: [
+        "Delivered a high-performance SPA for booking and station operations.",
+        "Improved authorization consistency and route separation across user roles.",
+        "Reduced booking conflicts through server-confirmed seat handling.",
+      ],
+      vi: [
+        "Bàn giao SPA hiệu suất cao cho đặt vé và vận hành bến xe.",
+        "Nâng cao tính nhất quán phân quyền và tách route theo vai trò người dùng.",
+        "Giảm xung đột đặt chỗ nhờ cơ chế xác nhận ghế từ phía server.",
+      ],
+    },
+    techStack: ["Vue 3", "Vite", "Pinia 3", "Vue Router 4", "Axios", "Bootstrap 5", "Vue Toastification"],
+    features: {
+      en: [
+        "Bus schedule management",
+        "Ticket booking flow",
+        "JWT authentication",
+        "RBAC authorization",
+        "Responsive operational dashboard",
+      ],
+      vi: [
+        "Quản lý lịch trình xe",
+        "Luồng đặt vé",
+        "Xác thực JWT",
+        "Phân quyền RBAC",
+        "Dashboard vận hành responsive",
+      ],
+    },
+    links: {
+      github: "https://github.com/ntqnhu0105/CNPM-22DTHC2-NPKHTech.git",
+    },
+  },
+  {
     slug: "ai-recruitment-tool",
     title: {
       en: "AI & Machine Learning Recruitment Support Tool for HR",
@@ -105,82 +381,8 @@ export const projects: Project[] = [
         "Phân trang phía client",
       ],
     },
-  },
-  {
-    slug: "bus-station-management",
-    title: {
-      en: "Eastern Bus Station Management Website",
-      vi: "Website Quản lý Bến xe Miền Đông",
-    },
-    role: {
-      en: "Frontend Developer",
-      vi: "Lập trình viên Frontend",
-    },
-    period: "Apr 2025 - May 2025",
-    summary: {
-      en: "High-performance SPA for ticket booking with JWT authentication and real-time notifications.",
-      vi: "SPA hiệu suất cao cho đặt vé xe với xác thực JWT và thông báo thời gian thực.",
-    },
-    description: {
-      en: "Built a comprehensive bus station management system using Vue 3 and the modern Vue ecosystem. The application handles complex ticket booking states, user authentication, and real-time updates across 20+ dynamic views.",
-      vi: "Xây dựng hệ thống quản lý bến xe toàn diện dùng Vue 3 và hệ sinh thái Vue hiện đại. Ứng dụng xử lý trạng thái đặt vé phức tạp, xác thực người dùng và cập nhật thời gian thực trên 20+ view động.",
-    },
-    challenges: {
-      en: [
-        "Managing complex state for ticket booking flows with multiple interdependent steps",
-        "Implementing secure JWT-based authentication with seamless token refresh",
-        "Building real-time notification system for booking updates",
-        "Handling 20+ dynamic views while maintaining fast load times",
-      ],
-      vi: [
-        "Quản lý state phức tạp cho luồng đặt vé với nhiều bước phụ thuộc lẫn nhau",
-        "Triển khai xác thực JWT bảo mật với tự động làm mới token",
-        "Xây dựng hệ thống thông báo thời gian thực cho cập nhật đặt vé",
-        "Xử lý 20+ view động trong khi vẫn duy trì tốc độ tải nhanh",
-      ],
-    },
-    solutions: {
-      en: [
-        "Leveraged Pinia for centralized state management with modular stores for each domain",
-        "Implemented Axios interceptors for automatic JWT refresh and session management",
-        "Built custom Vue composables for real-time notification handling",
-        "Used Vue Router 4 navigation guards for strict RBAC and route protection",
-      ],
-      vi: [
-        "Dùng Pinia để quản lý state tập trung với các store module hóa cho từng domain",
-        "Triển khai Axios interceptors để tự động làm mới JWT và quản lý phiên",
-        "Xây dựng Vue composables tùy chỉnh để xử lý thông báo thời gian thực",
-        "Dùng Vue Router 4 navigation guards cho RBAC chặt chẽ và bảo vệ route",
-      ],
-    },
-    results: {
-      en: [
-        "Successfully managed 20+ dynamic views with complex state interactions",
-        "Achieved seamless session management with zero authentication failures",
-        "Delivered real-time booking notifications with sub-second latency",
-      ],
-      vi: [
-        "Quản lý thành công 20+ view động với các tương tác state phức tạp",
-        "Quản lý phiên mượt mà, không có lỗi xác thực",
-        "Thông báo đặt vé thời gian thực với độ trễ dưới 1 giây",
-      ],
-    },
-    techStack: ["Vue 3", "Vite", "Pinia", "Vue Router 4", "Axios", "JWT"],
-    features: {
-      en: [
-        "Dynamic ticket booking system",
-        "JWT authentication with auto-refresh",
-        "Role-based access control",
-        "Real-time notifications",
-        "20+ responsive views",
-      ],
-      vi: [
-        "Hệ thống đặt vé động",
-        "Xác thực JWT với tự động làm mới",
-        "Kiểm soát truy cập theo vai trò",
-        "Thông báo thời gian thực",
-        "20+ view responsive",
-      ],
+    links: {
+      github: "https://github.com/dpminhtri-dev-swe/React-frontend.git",
     },
   },
   {
@@ -259,85 +461,8 @@ export const projects: Project[] = [
         "API calls với debounce",
       ],
     },
-  },
-  {
-    slug: "corporate-website",
-    title: {
-      en: "Nhien Viet Inspired - Corporate Website",
-      vi: "Nhiên Việt Inspired - Website Doanh nghiệp",
-    },
-    role: {
-      en: "Frontend Developer",
-      vi: "Lập trình viên Frontend",
-    },
-    period: "Jun 2025 - Aug 2025",
-    summary: {
-      en: "High-performance corporate website with Vanilla JS, optimized Core Web Vitals, and reusable OOP components.",
-      vi: "Website doanh nghiệp hiệu suất cao với Vanilla JS, tối ưu Core Web Vitals và component OOP tái sử dụng.",
-    },
-    description: {
-      en: "Developed a fully responsive corporate website using modern Vanilla JavaScript with a focus on performance optimization and code architecture. Implemented custom reusable UI components using OOP patterns.",
-      vi: "Phát triển website doanh nghiệp responsive hoàn toàn dùng Vanilla JavaScript hiện đại, tập trung vào tối ưu hiệu suất và kiến trúc code. Triển khai các UI component tái sử dụng tùy chỉnh theo mẫu OOP.",
-    },
-    challenges: {
-      en: [
-        "Building responsive UI without framework overhead while maintaining developer experience",
-        "Optimizing page load speed and Core Web Vitals scores",
-        "Creating reusable, maintainable components in vanilla JavaScript",
-        "Implementing reliable form validation with API integration",
-      ],
-      vi: [
-        "Xây dựng UI responsive không dùng framework trong khi vẫn duy trì trải nghiệm phát triển tốt",
-        "Tối ưu tốc độ tải trang và điểm Core Web Vitals",
-        "Tạo các component tái sử dụng, dễ bảo trì bằng vanilla JavaScript",
-        "Triển khai xác thực form đáng tin cậy với tích hợp API",
-      ],
-    },
-    solutions: {
-      en: [
-        "Engineered OOP-style JavaScript classes for reusable UI components (Toast system, Mobile Menu)",
-        "Used Intersection Observer for lazy loading and critical resource preloading",
-        "Integrated EmailJS API with async/await error handling and real-time Regex validation",
-        "Implemented responsive design ensuring seamless UI across all devices down to 480px",
-      ],
-      vi: [
-        "Xây dựng các class JavaScript theo phong cách OOP cho UI component tái sử dụng (Toast, Mobile Menu)",
-        "Dùng Intersection Observer để lazy loading và preload tài nguyên quan trọng",
-        "Tích hợp EmailJS API với xử lý lỗi async/await và xác thực Regex thời gian thực",
-        "Triển khai responsive design đảm bảo UI mượt mà trên mọi thiết bị xuống đến 480px",
-      ],
-    },
-    results: {
-      en: [
-        "Achieved excellent Core Web Vitals scores through lazy loading optimization",
-        "Delivered seamless responsive experience across all device sizes",
-        "Created maintainable codebase with reusable component architecture",
-      ],
-      vi: [
-        "Đạt điểm Core Web Vitals xuất sắc nhờ tối ưu lazy loading",
-        "Trải nghiệm responsive mượt mà trên mọi kích thước thiết bị",
-        "Codebase dễ bảo trì với kiến trúc component tái sử dụng",
-      ],
-    },
-    techStack: ["JavaScript (ES6+)", "HTML5", "CSS3", "EmailJS API", "Intersection Observer"],
-    features: {
-      en: [
-        "Responsive down to 480px",
-        "OOP-based component system",
-        "Lazy loading with Intersection Observer",
-        "Real-time form validation",
-        "EmailJS integration",
-      ],
-      vi: [
-        "Responsive xuống đến 480px",
-        "Hệ thống component theo OOP",
-        "Lazy loading với Intersection Observer",
-        "Xác thực form thời gian thực",
-        "Tích hợp EmailJS",
-      ],
-    },
     links: {
-      live: "https://nvgo.org",
+      github: "https://github.com/ntqnhu0105/DoAn-CoSo.git",
     },
   },
   {

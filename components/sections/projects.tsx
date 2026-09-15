@@ -9,12 +9,12 @@ const labels = {
   en: {
     section: "03. Projects",
     heading: "Case Studies",
-    sub: "A selection of projects showcasing my technical skills in frontend development, from complex SPAs to performance-optimized websites.",
+    sub: "A selection of projects spanning frontend engineering and full-stack product work, from high-performance interfaces to backend-driven systems.",
   },
   vi: {
     section: "03. Dự án",
     heading: "Các Dự án Tiêu biểu",
-    sub: "Một số dự án thể hiện kỹ năng kỹ thuật của tôi trong phát triển frontend, từ SPA phức tạp đến website tối ưu hiệu suất.",
+    sub: "Một số dự án trải dài từ frontend engineering đến work product full-stack, từ giao diện hiệu suất cao đến hệ thống được vận hành bởi backend.",
   },
 }
 

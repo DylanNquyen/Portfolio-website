@@ -8,6 +8,7 @@ const labels = {
     section: "04. Contact",
     heading: "Get In Touch",
     sub: "I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    phone: "Phone",
     location: "Location",
     ctaTitle: "Let's Work Together",
     ctaBody: "I'm passionate about building high-performance web applications and always eager to learn new technologies.",
@@ -17,6 +18,7 @@ const labels = {
     section: "04. Liên hệ",
     heading: "Liên hệ với tôi",
     sub: "Tôi đang tìm kiếm cơ hội thực tập. Dù bạn có câu hỏi hay chỉ muốn chào hỏi, hãy liên hệ với tôi!",
+    phone: "Điện thoại",
     location: "Địa chỉ",
     ctaTitle: "Hãy cùng hợp tác",
     ctaBody: "Tôi đam mê xây dựng ứng dụng web hiệu suất cao và luôn háo hức học hỏi công nghệ mới.",
@@ -40,7 +42,7 @@ export function Contact() {
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div className="space-y-6">
             <a
-              href="mailto:thiennguyenngoc004@gmail.com"
+              href="mailto:nnt.dev4@gmail.com"
               className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -49,7 +51,7 @@ export function Contact() {
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
                 <p className="text-foreground group-hover:text-primary transition-colors">
-                  thiennguyenngoc004@gmail.com
+                  nnt.dev4@gmail.com
                 </p>
               </div>
             </a>
@@ -71,15 +73,18 @@ export function Contact() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card">
+            <a
+              href="tel:+84367457477"
+              className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/30 transition-all"
+            >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                 <Phone className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Phone</p>
-                <p className="text-foreground">0969887591</p>
+                <p className="text-sm text-muted-foreground">{t.phone}</p>
+                <p className="text-foreground group-hover:text-primary transition-colors">0367457477</p>
               </div>
-            </div>
+            </a>
 
             <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -87,7 +92,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">{t.location}</p>
-                <p className="text-foreground">Di An, Binh Duong, Vietnam</p>
+                <p className="text-foreground">{language === "en" ? "Long Binh, Dong Nai, Viet Nam" : "Long Bình, Đồng Nai, Việt Nam"}</p>
               </div>
             </div>
           </div>
@@ -97,7 +102,7 @@ export function Contact() {
               <h3 className="text-xl font-semibold text-foreground mb-4">{t.ctaTitle}</h3>
               <p className="text-muted-foreground mb-6">{t.ctaBody}</p>
               <a
-                href="mailto:thiennguyenngoc004@gmail.com"
+                href="mailto:nnt.dev4@gmail.com"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
               >
                 {t.ctaBtn}

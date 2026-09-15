@@ -10,22 +10,15 @@ const content = {
     bio1: (
       <>
         I&apos;m a Software Engineering student at{" "}
-        <span className="text-foreground font-medium">HUTECH</span> with a passion for
-        crafting pixel-perfect, accessible user interfaces. My journey in web development
-        started 3 years ago, and since then, I&apos;ve built over 10 web projects ranging
-        from corporate websites to complex SPAs.
+        <span className="text-foreground font-medium">HUTECH</span> with hands-on experience building responsive frontend applications and full-stack systems. My experience spans React, Vue, TypeScript, Node.js, NestJS, REST/WebSocket APIs, authentication, database design, Docker, and microservices-style architecture.
       </>
     ),
     bio2: (
       <>
-        I specialize in <span className="text-primary">React.js</span>,{" "}
-        <span className="text-primary">Vue 3</span>, and{" "}
-        <span className="text-primary">TypeScript</span>, with a strong focus on
-        performance optimization, clean architecture, and responsive design. I believe in
-        writing code that is not only functional but also maintainable and scalable.
+        I enjoy building reliable, maintainable products from user interface to backend services. My work combines strong frontend craftsmanship with API design, database logic, security, and deployment awareness.
       </>
     ),
-    bio3: "When I'm not coding, you can find me exploring new technologies, playing badminton or Sepak takraw, enjoying music, or competing in e-sports. I'm always eager to learn and take on new challenges.",
+    bio3: "I focus on clean architecture, scalable implementation, and practical delivery across the full product lifecycle.",
     recognition: "Recognition",
     award1: "Outstanding Student Award",
     award1sub: "Faculty of IT, HUTECH (2025)",
@@ -42,22 +35,15 @@ const content = {
     bio1: (
       <>
         Tôi là sinh viên Kỹ thuật Phần mềm tại{" "}
-        <span className="text-foreground font-medium">HUTECH</span>, đam mê xây dựng
-        giao diện người dùng pixel-perfect và dễ tiếp cận. Hành trình phát triển web của
-        tôi bắt đầu 3 năm trước, và từ đó tôi đã xây dựng hơn 10 dự án web từ website
-        doanh nghiệp đến SPA phức tạp.
+        <span className="text-foreground font-medium">HUTECH</span>, có kinh nghiệm thực tế xây dựng các ứng dụng frontend responsive và hệ thống full-stack. Kinh nghiệm của tôi bao gồm React, Vue, TypeScript, Node.js, NestJS, REST/WebSocket APIs, authentication, thiết kế cơ sở dữ liệu, Docker và kiến trúc microservices-style.
       </>
     ),
     bio2: (
       <>
-        Tôi chuyên về <span className="text-primary">React.js</span>,{" "}
-        <span className="text-primary">Vue 3</span> và{" "}
-        <span className="text-primary">TypeScript</span>, tập trung vào tối ưu hiệu
-        suất, kiến trúc sạch và thiết kế responsive. Tôi tin vào việc viết code không
-        chỉ hoạt động tốt mà còn dễ bảo trì và mở rộng.
+        Tôi yêu thích xây dựng các sản phẩm ổn định, dễ bảo trì từ giao diện người dùng đến backend services. Công việc của tôi kết hợp kỹ năng frontend vững chắc với thiết kế API, logic database, bảo mật và ý thức triển khai.
       </>
     ),
-    bio3: "Khi không code, bạn có thể thấy tôi khám phá công nghệ mới, chơi cầu lông hoặc đá cầu, nghe nhạc, hoặc thi đấu e-sports. Tôi luôn háo hức học hỏi và đón nhận thử thách mới.",
+    bio3: "Tôi tập trung vào kiến trúc sạch, triển khai mở rộng và đưa sản phẩm vào thực tế một cách hiệu quả.",
     recognition: "Thành tích",
     award1: "Sinh viên Xuất sắc",
     award1sub: "Khoa CNTT, HUTECH (2025)",
