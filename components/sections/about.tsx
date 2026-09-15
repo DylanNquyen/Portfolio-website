@@ -78,7 +78,7 @@ export function About() {
           <div className="space-y-6">
             <div className="p-6 rounded-lg border border-border bg-card">
               <div className="flex items-center gap-3 mb-4">
-                <Trophy className="w-5 h-5 text-primary" />
+                {/* <Trophy className="w-5 h-5 text-primary" /> */}
                 <h3 className="font-semibold text-foreground">{t.recognition}</h3>
               </div>
               <ul className="space-y-3 text-sm">
